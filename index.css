@@ -1,1 +1,9 @@
 /* Put your style information here! */
+#page-wrapper {
+    margin-top: 50px;
+}
+
+#machine-sketch {
+    max-height: 800px;
+    width: auto;
+}

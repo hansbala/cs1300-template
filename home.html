@@ -1,14 +1,320 @@
 <!doctype html>
+<html lang="en">
 
-<html>
-  <head>
-    <title>INSERT TITLE HERE!</title>
-    <link rel="stylesheet" href="index.css">
-    <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
-    <!-- TODO: put your HTML code here! -->
-  </body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- User defined styles -->
+  <link rel="stylesheet" href="index.css">
+
+  <title>UX - Vending Machine</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="#">Vending Machine</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#overview">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#observations">Observations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#responses">Responses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#personas">Personas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#storyboard">Storyboard</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" id="page-wrapper">
+    <h1 class="text-center">Vending Machine: How efficient is it?</h1>
+    <div class="row mt-5">
+      <div class="col-sm-12 col-md-6">
+        <h4 class="text-center text-dark" id="overview">Overview</h4>
+        <p>
+          A vending machine is an interface that users always seem to struggle with from time to time.
+          <br><br>
+          On the side, I have a sketch of a vending machine with its basic components.
+        </p>
+        <p>
+          <b>Brief Description: </b>
+          The vending machine has a item input area and a card swipe area. Ideally, one just needs to input the item
+          number
+          and pay for it. However, Common troubles
+          include not getting the payment to work, selecting the wrong item and not knowing how to cancel, and the worst
+          of
+          all the machine not being able to dispense the correct item.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="container text-center">
+          <img src="./vending_sketch.jpg" alt="Sketch of a vending machine" class="img-fluid" id="machine-sketch">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <h5 class="text-center">Questions</h5> -->
+    <p>To find out how effective vending machines are, I asked 5 users the following questions: </p>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">How often do you use vending machines?
+        <div class="container-fluid">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Once a week</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline2">Once a month</label>
+          </div>
+
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline3">Once in six months</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline4">Once a year</label>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">What payment option do you use the most for a vending machine?
+        <div class="container-fluid">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline5" name="customRadioInline10" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline5">Debit Card / Credit Card</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline6" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline6">Cash / Coin</label>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">How streamlined would you say the process from
+        choosing an item to having it in your hand is?
+        <div class="container-fluid">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline7" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline7">Super fast</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline8" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline8">Relatively fast</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline9" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline9">Neutral</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline10" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline10">Really slow</label>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">How often have you selected the wrong item to dispense from the vending machine, and
+        paid twice to receive the right item(s)?
+        <div class="container-fluid">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline11" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline11">Frequently</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline12" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline12">Half the time</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline13" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline13">Rarely</label>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">When using the vending machine, do you prefer to have vending machines use the swipe
+        option for your card or
+        the insert option?</li>
+      <li class="list-group-item">How intuitive do you think the interface is? Do you think a child or someone with a
+        disability would be able
+        to use this interface?</li>
+    </ul>
+
+    <div class="row mt-5">
+      <div class="col-sm-12 mt-2">
+        <h4 class="text-center" id="observations">General Observations</h4>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-primary">Some users generally had a hard time identifying what
+            the general flow of purchasing an item from a vending machine should be. Since some vending machines require
+            the user to first pre-select the item, and then insert the cash/card for payment, while others first require
+            you to insert the card, and afterwards select the item you wish to purchase, it was quite confusing.</li>
+          <li class="list-group-item list-group-item-secondary">Another important observation was that most vending
+            machines do not have a “Payment processing.. Please Wait”. As a result, a lot of users feel that the vending
+            machine may be having cellular connection issues and so they remove the card before the payment can be
+            completed.</li>
+          <li class="list-group-item list-group-item-success">In the case of this experiment, if the vending machine was
+            located in an area such as a campus area, users were confused as to what payment mediums were acceptable.
+            Some institutions require the user to use their institution card while some others require you to use one’s
+            own credit card / debit card.</li>
+          <li class="list-group-item list-group-item-danger">While selecting an item to dispense from the vending
+            machine, if the user selected the wrong item, a lot of the times the user would panic, try to immediately
+            remove their card (which in some cases is locked by the vending machine much like an ATM), and in a frenzy,
+            click a lot of buttons in hopes to cancel the transaction. </li>
+          <li class="list-group-item list-group-item-warning">A lot of users struggle to find the right amount of
+            pressure required to register an input with the vending machine. While some users would use the interface
+            with a light amount of pressure much like a mobile screen touch interface, others would press the buttons
+            like that of a New York subway system ticket dispenser.</li>
+        </ul>
+      </div>
+      <div class="col-sm-12 mt-5">
+        <h4 class="text-center" id="responses">Question Responses</h4>
+        <ol class="list-group">
+          <li class="list-group-item">
+            <b>(1) How often do you use vending machines? </b>
+            <br>
+            Most users used the vending machines about once a month. However, users also made it aware that if they were
+            visiting a workplace or location that was out of their comfort zone, they would turn to the vending machines
+            for known snacks, rather than a place like a cafeteria.
+          </li>
+          <li class="list-group-item">
+            <b>(2) What payment option do you use the most for a vending machine? </b>
+            <br>
+            A vast majority of the users used the card option. However, some of the users (coming from a less developed
+            region, and not living primarily in the United States), used cash quite a bit.
+          </li>
+          <li class="list-group-item">
+            <b>(3) How streamlined would you say the process from
+              choosing an item to having it in your hand is? </b>
+            <br>
+            This was completely dependent on the user. A lot of the users interviewed for this project had used vending
+            machines quite a bit, and so responded with either the “super fast” or the “relatively fast options”. On the
+            other hand, those users who infrequently used vending machines, or those from lesser developed countries,
+            mostly responded with the “fast some of the time and slow otherwise” or the “I can never get it to work”
+            option.
+
+          </li>
+          <li class="list-group-item">
+            <b>(4) How often have you selected the wrong item to dispense from the vending machine, and
+              paid twice to receive the right item(s)? </b>
+            <br>
+            The users who were quite comfortable with using the machine had prior knowledge that
+            vending machines do not come built-in with an “Undo” button. As a result, these users were much more careful
+            before making their choice, and more
+            often than not double-checking to see if they in fact had the right item number. On the other hand, less
+            experienced users, gave less priority to making the actual choice and experienced more number of wrong
+            dispenses. In most cases if a mitskae was made, a second purchase was initiated.
+
+          </li>
+          <li class="list-group-item">
+            <b>(5) When using the vending machine, do you prefer to have vending machines use the swipe
+              option for your card or
+              the insert option? </b>
+            <br>
+            Most users preferred having the card option as this would save them the hassle of collecting change
+            afterwards.
+          </li>
+          <li class="list-group-item">
+            <b>(6) How intuitive do you think the interface is? Do you think a child or someone with a
+              disability would be able
+              to use this interface? </b>
+            <br>
+            Users reported that most vending machines are not very accessible. The lack of instructions on a lot of
+            machines, and the general assumption by vending machine manufacturers that most users would already know how
+            to use a vending machine resulted in the interface being less user friendly than one should expect.
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Personas section -->
+    <h3 class="text-center mt-5" id="personas">Personas</h3>
+    <div class="row mt-5">
+      <div class="col-sm-12 col-md-6">
+        <img src="./carol_persona.jpg" alt="Carol's persona" class="img-fluid persona-img">
+        <h5 class="text-center">Impatient Carol</h5>
+        <p>
+          <b>Description:</b>
+          The first persona I come up with is that of an impatient and impulsive person. I named her Carol. This sort of
+          person only uses the vending machine for the lack of better options, and is too lazy to go to a nearby
+          convenience store for snacks.
+        </p>
+        <p>
+          <b>Interface problem: </b>
+          The problems that this sort of user experiences includes pressing a number of buttons in a hurried manner and
+          making a mistake in their selection, removes their card before the transaction is complete, and mistakes what
+          card she can use in the machine.
+        </p>
+        <p>
+          <b>Representation: </b>
+          A lot of users are like Carol in the sense that they only go to the vending machine when they do not find any
+          other better options.
+          When using a vending machine, a lot of users like Carol tend to be quite impatient and rush the whole process
+          of vending something from the machine.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <img src="./matt_persona.jpg" alt="Matt's persona" class="img-fluid persona-img">
+        <h5 class="text-center">Meticulous Matt</h5>
+        <p>
+          <b>Description:</b>
+          The second persona that I came up with is Meticulous Matt. Since the CIT vending machine is exclusively used
+          by CS students, Meticulous Matt embodies some of the standard characteristics of tech-savvy, attentive
+          students who can spot little bugs in 1000+ lines of code.
+        </p>
+        <p>
+          <b>Interface problem:</b>
+          Matt is annoyed by the lack of directions and explanation (such as loading…. ) of the vending machine. He is
+          also frustrated that the vending machine only accepts a certain kind of card/payment.
+        </p>
+        <p>
+          <b>Representation:</b>
+          Many users are just like Matt, and when choosing an item to dispense from the machine are really quite careful
+          in making their pick.
+          They are generally quite annoyed by the lack of directions outlined on some vending machines.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Storyboard section -->
+    <h3 class="text-center mt-5" id="storyboard">Storyboard</h3>
+    <div class="row m-5">
+      <div class="col-sm-12">
+        <p class="text-center">When Impatient Carol has been spending the whole day at the lab, the vending machine adds
+          to her frustration!
+        </p>
+        <div class="container text-center">
+          <img src="./storyboard_annotated.png" alt="Storyboard Picture" class="img-fluid" id="storyboard-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
